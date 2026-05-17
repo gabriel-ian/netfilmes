@@ -1,0 +1,22 @@
+.hero {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #9f9f9f;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #ff3d3d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}

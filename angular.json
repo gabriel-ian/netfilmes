@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "bbd61e95-be0f-4223-9c2f-3236bbc07c1f"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "netfilmes": {
+    "exvideos": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "netfilmes:build:production"
+              "buildTarget": "exvideos:build:production"
             },
             "development": {
-              "buildTarget": "netfilmes:build:development"
+              "buildTarget": "exvideos:build:development"
             }
           },
           "defaultConfiguration": "development"

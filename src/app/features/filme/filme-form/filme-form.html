@@ -1,0 +1,80 @@
+<div class="form-box">
+  <h2>Cadastro de filme</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field">
+      <label for="titulo">Título</label>
+      <input id="titulo" type="text" formControlName="titulo" />
+
+      @if (form.controls.titulo.touched && form.controls.titulo.invalid) {
+      <small>Informe um título com no mínimo 3 caracteres.</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" formControlName="descricao"></textarea>
+      <span class="character-count">
+        {{ form.controls.descricao.value.length }} caracteres
+      </span>
+
+      @if (form.controls.descricao.touched && form.controls.descricao.invalid) {
+      <small>Informe uma descrição com no mínimo 10 caracteres.</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="genero">Gênero</label>
+      <input id="genero" type="text" formControlName="genero" />
+
+      @if (form.controls.genero.touched && form.controls.genero.invalid) {
+        <small>O gênero é ogrigatório.</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="duracao">Duração</label>
+      <input id="duracao" type="text" formControlName="duracao" />
+
+      @if (form.controls.duracao.touched && form.controls.duracao.invalid) {
+      <small>A duração é obrigatória.</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="miniatura">Miniatura</label>
+      <input id="miniatura" type="text" formControlName="miniatura" />
+
+      @if (form.controls.miniatura.touched && form.controls.miniatura.invalid) {
+      <small>A miniatura é obrigatória.</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="url">URL do filme</label>
+      <input id="url" type="text" formControlName="url" />
+
+      @if (form.controls.url.touched && form.controls.url.invalid) {
+      <small>A URL é obrigatória.</small>
+      }
+    </div>
+
+    <div >
+      <label>Data de lançamento</label>
+      <input type="date" formControlName="dataLancamento">
+
+      @if (form.controls.dataLancamento.touched && form.controls.dataLancamento.invalid) {
+      <small>A data de lançamento é obrigatória.</small>
+      }
+    </div>
+
+    <div class="checkbox-area">
+      <input type="checkbox" formControlName="emCartaz">
+
+      <label>Filme em cartaz</label>
+    </div>
+
+    
+    <button type="submit">Salvar</button>
+  </form>
+</div>
