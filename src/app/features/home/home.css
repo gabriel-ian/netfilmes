@@ -8,7 +8,7 @@
 }
 
 .hero p {
-  color: #9f9f9f;
+  color: #ccc;
   margin-bottom: 20px;
 }
 
@@ -19,4 +19,13 @@
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn.secondary {
+  background-color: #333;
 }

@@ -4,6 +4,7 @@ export interface Filme {
   descricao: string;
   genero: string;
   duracao: string;
-  url: string;
   miniatura: string;
+  dataLancamento: string;
+  emCartaz: boolean;
 }

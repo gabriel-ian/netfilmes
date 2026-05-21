@@ -50,15 +50,6 @@
       }
     </div>
 
-    <div class="field">
-      <label for="url">URL do filme</label>
-      <input id="url" type="text" formControlName="url" />
-
-      @if (form.controls.url.touched && form.controls.url.invalid) {
-      <small>A URL é obrigatória.</small>
-      }
-    </div>
-
     <div >
       <label>Data de lançamento</label>
       <input type="date" formControlName="dataLancamento">

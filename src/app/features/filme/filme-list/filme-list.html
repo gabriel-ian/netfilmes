@@ -1,0 +1,66 @@
+<div class="list-box">
+  <div class="top-bar">
+    <h2>Lista de Filmes</h2>
+
+    <a
+      routerLink="/cadastrar-filme"
+      class="btn"
+    >
+      Novo Filme
+    </a>
+  </div>
+
+  @if (filmes.length === 0) {
+  <div class="empty-state">
+    Nenhum filme cadastrado.
+  </div>
+  }
+
+  <div class="filme-grid">
+    @for (filme of filmes; track filme.id) {
+
+    <div class="filme-item">
+      <img
+        [src]="filme.miniatura"
+        [alt]="filme.titulo"
+      />
+
+      <h3>{{ filme.titulo }}</h3>
+
+      <p>
+        <strong>Gênero:</strong>
+        {{ filme.genero }}
+      </p>
+
+      <p>
+        <strong>Duração:</strong>
+        {{ filme.duracao }}
+      </p>
+
+      <p>
+        <strong>Lançamento:</strong>
+        {{ filme.dataLancamento }}
+      </p>
+
+      <p>{{ filme.descricao }}</p>
+
+      <div class="actions">
+        <button
+          class="edit-btn"
+          (click)="edit(filme.id)"
+        >
+          Editar
+        </button>
+
+        <button
+          class="delete-btn"
+          (click)="remove(filme.id)"
+        >
+          Excluir
+        </button>
+      </div>
+    </div>
+
+    }
+  </div>
+</div>
