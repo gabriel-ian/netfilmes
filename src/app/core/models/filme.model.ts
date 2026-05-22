@@ -6,5 +6,5 @@ export interface Filme {
   duracao: string;
   miniatura: string;
   dataLancamento: string;
-  emCartaz: boolean;
+  emCartaz: boolean; 
 }
